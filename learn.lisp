@@ -14,12 +14,10 @@
 )
 
 (defun fizzbuzz-recursive(start end incr)
-    (block b-rec
-        (if (> start end)
-            (return-from b-rec '()))
-        (display-fizz-buzz start end)
-        (fizzbuzz-recursive (+ start incr) end incr)
-    )
+    (if (> start end)
+        (return-from fizzbuzz-recursive '()))
+    (display-fizz-buzz start end)
+    (fizzbuzz-recursive (+ start incr) end incr)
 )
 
 (defun fizzbuzz-iterative(start end incr)
@@ -30,4 +28,4 @@
     )
 )
 
-(fizzbuzz-iterative 0 100 1)
+(fizzbuzz-recursive 0 100 1)
