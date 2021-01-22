@@ -1,8 +1,3 @@
-(defun factorial(x)
-    (if (> x 1)
-        (+ x (factorial (- x 1)))
-        1))
-
 (defun display-fizz-buzz(start end)
     (setq line "")
     (if (= (mod start 3) 0)
